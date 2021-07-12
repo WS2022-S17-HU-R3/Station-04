@@ -1,0 +1,26 @@
+$sGreen: #5dd782;
+$sGreenDark: #49b56a;
+$sGreenLight: #67ee90;
+$sGray: #333;
+$sGrayLight: #eee;
+$sWhite: #fff;
+
+$breakpoint: 768px;
+
+@mixin responsive( $class )
+{
+    @if $class == mobile
+    {
+        @media( max-width: $breakpoint ) { @content; }
+    }
+    @else if $class == desktop
+    {
+        @media( min-width: $breakpoint ) { @content; }
+    }
+}
+
+@font-face 
+{
+    font-family: "Arial Narrow";
+    src: url("../fonts/Arial-Narrow.ttf") format("ttf"),
+}
